@@ -19,8 +19,11 @@ class LogInViewController: UIViewController {
 
   override func viewDidLoad() {
     viewModel = LoginViewModel(APIService.shared, self)
-    emailTextField.text = "bee@example.com"
-    passwordTextfield.text = "qwerty123"
+    #if DEBUG
+      self.emailTextField.text = "bee@example.com"
+      self.passwordTextfield.text = "qwerty123"
+    #endif 
+
   }
 
 

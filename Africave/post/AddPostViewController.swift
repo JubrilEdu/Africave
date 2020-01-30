@@ -37,6 +37,7 @@ class AddPostViewController:UIViewController {
 
 
   @IBAction func onClickUpload(_ sender: Any) {
+    
   }
 }
 
