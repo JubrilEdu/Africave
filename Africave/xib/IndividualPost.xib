@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IndividualPost" customModule="Africave" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="418"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P9L-bc-jMa">
+                    <rect key="frame" x="20" y="8" width="314" height="273"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="314" id="4ma-2L-sub"/>
+                        <constraint firstAttribute="height" constant="273" id="qfg-eF-jYV"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH9-wG-Wt8">
+                    <rect key="frame" x="16" y="313" width="310" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="1ao-jT-04J"/>
+                        <constraint firstAttribute="height" constant="33" id="P6s-Ao-7aZ"/>
+                        <constraint firstAttribute="width" constant="310" id="UOA-sI-dsF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYL-wY-cac">
+                    <rect key="frame" x="16" y="354" width="310" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="Idj-2L-fYc"/>
+                        <constraint firstAttribute="height" constant="42" id="Iyd-L5-6cB"/>
+                        <constraint firstAttribute="width" constant="310" id="OiC-dY-gty"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qH9-wG-Wt8" secondAttribute="bottom" constant="72" id="7Jl-ql-9zy"/>
+                <constraint firstItem="MYL-wY-cac" firstAttribute="top" secondItem="qH9-wG-Wt8" secondAttribute="bottom" constant="8" id="ETX-wK-StG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P9L-bc-jMa" secondAttribute="trailing" constant="20" id="IBh-iZ-fry"/>
+                <constraint firstItem="P9L-bc-jMa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="SGs-td-bnX"/>
+                <constraint firstItem="P9L-bc-jMa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="abg-UM-hkS"/>
+                <constraint firstItem="qH9-wG-Wt8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="axd-3a-MrH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qH9-wG-Wt8" secondAttribute="trailing" constant="28" id="epq-vp-EnO"/>
+                <constraint firstItem="qH9-wG-Wt8" firstAttribute="top" secondItem="P9L-bc-jMa" secondAttribute="bottom" constant="32" id="euP-F7-IcT"/>
+                <constraint firstItem="MYL-wY-cac" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fEI-kT-2PN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="hashTagLabels" destination="MYL-wY-cac" id="Mo8-oj-AJi"/>
+                <outlet property="postImage" destination="P9L-bc-jMa" id="v4L-4d-mTd"/>
+                <outlet property="userNameLabel" destination="qH9-wG-Wt8" id="0cu-io-XJR"/>
+            </connections>
+            <point key="canvasLocation" x="88.405797101449281" y="-22.098214285714285"/>
+        </view>
+    </objects>
+</document>
