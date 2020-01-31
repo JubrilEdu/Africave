@@ -45,4 +45,12 @@ struct APIEndpoints {
   func getAllUsersUrl(limit: Int,offset: Int) -> URL {
     return URL(string: "\(APIConstants().getBaseUrl())/users?limit=\(limit)&offset=\(offset)")!
   }
+
+  func createPost() -> URL {
+    return URL(string: "\(APIConstants().getBaseUrl())/posts")!
+  }
+
+  func getPostByHashtag(hashTag: String,limit: Int,offset: Int) -> URL {
+    return URL(string: "\(APIConstants().getBaseUrl())/explore/\(hashTag)?limit=\(limit)&offset=\(offset)")!
+  }
 }

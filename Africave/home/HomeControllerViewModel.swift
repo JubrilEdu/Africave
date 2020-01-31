@@ -28,7 +28,6 @@ protocol HomeControllerViewModelProtocol {
 
   func onHashTagClicked(hashTag: String)
 
-  func loadImage(imageUrl: String) -> Data
 
 
 
@@ -67,12 +66,6 @@ class HomeControllerViewModel: HomeControllerViewModelProtocol {
   func onHashTagClicked(hashTag: String) {
 
   }
-
-  func loadImage(imageUrl: String) -> Data {
-     let url = URL(string: imageUrl)
-     return try! Data(contentsOf: url!)
-   }
-
 
   func onFailure(errorMessage: String) {
     delegate.onPostListFailure(errorMessage: errorMessage)

@@ -1,19 +1,19 @@
 //
-//  HomeViewController.swift
+//  ExploreViewController.swift
 //  Africave
 //
-//  Created by Jubril   on 1/27/20.
+//  Created by Jubril   on 1/31/20.
 //  Copyright © 2020 Jubril. All rights reserved.
 //
 
 import Foundation
 import UIKit
-import Kingfisher
 
-class HomeViewController: UIViewController{
+class ExploreViewController: UIViewController {
   @IBOutlet weak var postTableView: UITableView!
+  public var hashTag:String!
   var listOfPosts:[PostResponse] = []
-  var viewModel: HomeControllerViewModel!
+  var viewModel: ExploreControllerViewModel!
   var reload: Bool = true
 
   override func viewDidLoad() {
@@ -21,24 +21,20 @@ class HomeViewController: UIViewController{
     postTableView.register(nib, forCellReuseIdentifier: "IndividualPost")
     postTableView.dataSource = self
     postTableView.delegate = self
-    viewModel = HomeControllerViewModel(APIService.shared,self)
+    viewModel = ExploreControllerViewModel(APIService.shared,self)
     UIUtils.shared.showProgressBar(message: "Loading", view: self.view)
-    
-    viewModel.getAllPosts()
+    viewModel.onHashTagClicked(hashTag: hashTag!)
   }
 
-  override func viewWillAppear(_ animated: Bool) {
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "ADD", style: .plain, target: self, action: #selector(self.onAddNewPostClicked(sender:)))
-    self.navigationItem.rightBarButtonItem?.tintColor = UIColor.blue
-  }
-
-  @objc
-  func onAddNewPostClicked(sender: UIBarButtonItem){
-
+  override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      StorageUtil.shared.saveInt(value:0, key: "hashtag_post_offset")
+      listOfPosts.removeAll()
+      reload = true
   }
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
     return listOfPosts.count
   }
@@ -50,7 +46,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     cell.hashTagLabels.text = Utils().processedString(word: self.listOfPosts[indexPath.row].hashtags)
     if indexPath.row == (listOfPosts.count - 1) && reload {
       UIUtils.shared.showProgressBar(message: "Loading", view: self.view)
-         viewModel.getAllPosts()
+         viewModel.onHashTagClicked(hashTag: hashTag!)
        }
     return cell
   }
@@ -59,17 +55,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1;
   }
-
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let postVC = self.storyboard?.instantiateViewController(identifier: "singlePostController") as! SinglePostController
-    postVC.post = listOfPosts[indexPath.row]
-    navigationController?.pushViewController(postVC, animated: true)
-    
-  }
 }
 
-extension HomeViewController: HomeControllerViewModelDelegate{
-
+extension ExploreViewController: ExploreControllerViewModelDelegate {
   func onPostListSuccess(listOfPosts: [PostResponse]) {
     UIUtils.shared.dismissProgressBar()
     if listOfPosts.isEmpty {
@@ -81,11 +69,9 @@ extension HomeViewController: HomeControllerViewModelDelegate{
       self.listOfPosts = listOfPosts.sorted(){(($0.createdAt)?.compare($1.createdAt))! == .orderedDescending }
       postTableView.reloadData()
     } else {
-      self.listOfPosts.append(contentsOf: listOfPosts)
+      self.listOfPosts.append(contentsOf: listOfPosts.sorted(){(($0.createdAt)?.compare($1.createdAt))! == .orderedDescending })
       postTableView.reloadData()
-      postTableView.scrollToRow(at: IndexPath(row: (self.listOfPosts.count - listOfPosts.count) - 1, section: 0), at: .top, animated: false)
     }
-
   }
 
   func onPostListFailure(errorMessage: String) {
@@ -95,4 +81,3 @@ extension HomeViewController: HomeControllerViewModelDelegate{
 
 
 }
-

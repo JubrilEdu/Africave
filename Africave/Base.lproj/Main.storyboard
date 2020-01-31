@@ -475,7 +475,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPJ-MD-BiP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPJ-MD-BiP" customClass="ActiveLabel" customModule="ActiveLabel">
                                 <rect key="frame" x="20" y="694" width="374" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="c3U-Im-bEC"/>
@@ -510,7 +510,7 @@
                     </view>
                     <connections>
                         <outlet property="emailLabel" destination="PGr-xa-zIJ" id="QAe-G5-EA8"/>
-                        <outlet property="hashtagLabel" destination="QPJ-MD-BiP" id="MOf-zA-TMs"/>
+                        <outlet property="hashTagLabel" destination="QPJ-MD-BiP" id="bPI-Aa-DIC"/>
                         <outlet property="postImage" destination="OLc-mu-oN3" id="cVB-9N-SzV"/>
                         <outlet property="usernameLabel" destination="8p5-eT-dDj" id="Ldg-36-zbs"/>
                     </connections>
@@ -518,6 +518,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obF-TP-Muj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4305.7971014492759" y="-344.19642857142856"/>
+        </scene>
+        <!--Explore View Controller-->
+        <scene sceneID="dym-Rs-Y1U">
+            <objects>
+                <viewController storyboardIdentifier="exploreController" id="BNO-O4-7ye" customClass="ExploreViewController" customModule="Africave" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9bC-0Z-nkL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-cg-yj2">
+                                <rect key="frame" x="0.0" y="19" width="414" height="867"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fjr-XH-YV8"/>
+                    </view>
+                    <connections>
+                        <outlet property="postTableView" destination="n7D-cg-yj2" id="Vvq-vp-7Ee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4so-mc-oxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5069.5652173913049" y="-345.53571428571428"/>
         </scene>
         <!--Add Post View Controller-->
         <scene sceneID="ey9-C3-KXK">

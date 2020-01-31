@@ -11,6 +11,7 @@ target 'Africave' do
   pod 'EVReflection/Alamofire'
   pod 'JGProgressHUD'
   pod 'Kingfisher', '~> 5.0'
+  pod 'ActiveLabel'
 
   target 'AfricaveTests' do
     inherit! :search_paths

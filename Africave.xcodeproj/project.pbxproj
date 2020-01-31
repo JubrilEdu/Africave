@@ -11,6 +11,7 @@
 		292502DB23E2BFC000D77931 /* SinglePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292502DA23E2BFC000D77931 /* SinglePostController.swift */; };
 		292502DD23E2C2BA00D77931 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292502DC23E2C2BA00D77931 /* Utils.swift */; };
 		292502DF23E3223000D77931 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292502DE23E3223000D77931 /* AddPostViewController.swift */; };
+		292502E923E3A54500D77931 /* AddPostViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292502E823E3A54400D77931 /* AddPostViewControllerViewModel.swift */; };
 		29A3D64E23DED4E700142901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3D64D23DED4E700142901 /* AppDelegate.swift */; };
 		29A3D65023DED4E700142901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3D64F23DED4E700142901 /* SceneDelegate.swift */; };
 		29A3D65523DED4E700142901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A3D65323DED4E700142901 /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 		29A3D68823E0F08A00142901 /* HomeControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3D68723E0F08A00142901 /* HomeControllerViewModel.swift */; };
 		29A3D6C023E1FE3300142901 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3D6BF23E1FE3300142901 /* StorageUtil.swift */; };
 		29A3D6C223E22B1100142901 /* UserControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3D6C123E22B1100142901 /* UserControllerViewModel.swift */; };
+		29E6129C23E430F100DEA37C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E6129B23E430F100DEA37C /* ExploreViewController.swift */; };
+		29E6129E23E4341400DEA37C /* ExploreControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E6129D23E4341400DEA37C /* ExploreControllerViewModel.swift */; };
 		310D0008190273FAD55F0E03 /* Pods_AfricaveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05EC80982F1B8EF5ED9C7950 /* Pods_AfricaveTests.framework */; };
 		7BDC519A3801CC61E6F9F25F /* Pods_Africave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBB88EFB8751B770AC5A081 /* Pods_Africave.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +56,7 @@
 		292502DA23E2BFC000D77931 /* SinglePostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostController.swift; sourceTree = "<group>"; };
 		292502DC23E2C2BA00D77931 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		292502DE23E3223000D77931 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		292502E823E3A54400D77931 /* AddPostViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewControllerViewModel.swift; sourceTree = "<group>"; };
 		29A3D64A23DED4E700142901 /* Africave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A3D64D23DED4E700142901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A3D64F23DED4E700142901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		29A3D68723E0F08A00142901 /* HomeControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerViewModel.swift; sourceTree = "<group>"; };
 		29A3D6BF23E1FE3300142901 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		29A3D6C123E22B1100142901 /* UserControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserControllerViewModel.swift; sourceTree = "<group>"; };
+		29E6129B23E430F100DEA37C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		29E6129D23E4341400DEA37C /* ExploreControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreControllerViewModel.swift; sourceTree = "<group>"; };
 		4FEFCBD2D1BA455DB2E56310 /* Pods-Africave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Africave.debug.xcconfig"; path = "Target Support Files/Pods-Africave/Pods-Africave.debug.xcconfig"; sourceTree = "<group>"; };
 		6CAC64361757D1B43D6C7608 /* Pods-AfricaveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AfricaveTests.debug.xcconfig"; path = "Target Support Files/Pods-AfricaveTests/Pods-AfricaveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EBB88EFB8751B770AC5A081 /* Pods_Africave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Africave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +172,9 @@
 				29A3D67723DEE88500142901 /* PostDetailsViewController.swift */,
 				292502DA23E2BFC000D77931 /* SinglePostController.swift */,
 				292502DE23E3223000D77931 /* AddPostViewController.swift */,
+				292502E823E3A54400D77931 /* AddPostViewControllerViewModel.swift */,
+				29E6129B23E430F100DEA37C /* ExploreViewController.swift */,
+				29E6129D23E4341400DEA37C /* ExploreControllerViewModel.swift */,
 			);
 			path = post;
 			sourceTree = "<group>";
@@ -421,8 +430,10 @@
 				29A3D64E23DED4E700142901 /* AppDelegate.swift in Sources */,
 				29A3D67023DEE7BA00142901 /* SignUpViewController.swift in Sources */,
 				292502DB23E2BFC000D77931 /* SinglePostController.swift in Sources */,
+				292502E923E3A54500D77931 /* AddPostViewControllerViewModel.swift in Sources */,
 				29A3D67623DEE84E00142901 /* UsersViewController.swift in Sources */,
 				29A3D67223DEE7E900142901 /* LogInViewController.swift in Sources */,
+				29E6129E23E4341400DEA37C /* ExploreControllerViewModel.swift in Sources */,
 				29A3D68023DFA4DB00142901 /* APIResponse.swift in Sources */,
 				29A3D67A23DF029400142901 /* APIConstants.swift in Sources */,
 				29A3D67C23DF052300142901 /* APIService.swift in Sources */,
@@ -437,6 +448,7 @@
 				29A3D6C223E22B1100142901 /* UserControllerViewModel.swift in Sources */,
 				292502D923E2571400D77931 /* UIUtils.swift in Sources */,
 				29A3D68823E0F08A00142901 /* HomeControllerViewModel.swift in Sources */,
+				29E6129C23E430F100DEA37C /* ExploreViewController.swift in Sources */,
 				29A3D6C023E1FE3300142901 /* StorageUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
